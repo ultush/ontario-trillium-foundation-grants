@@ -1,7 +1,97 @@
 # Ontario Trillium Foundation Grant Funding Analysis Methodology
 
-Ontario Trillium Foundation is the largest grant foundation in Canada, and as a foundation entirely dependent on Ontario government funding, 
-it is an instrument of government policy through granting priorities in the social economy. One of Ontario Trillium Foundations goals is to encourage best practices in the social economy in Ontario.  
-One of these best practices is transparency, and the Ontario Trillium Foundations transparency initiatives has been publication of its grants information as Open Data [Ontario Trillium Foundation Open Dtaa](https://otf.ca/open).  
-The OTF grant datasets provide a comprehensive view of funding through the foundation to social economy organizations serving individuals with disabilities in Ontario. 
+Ontario Trillium Foundation (OTF) is the largest grant foundation in Canada, and as a foundation entirely dependent on Ontario government funding,
+it is an instrument of government policy through granting priorities in the social economy. One of Ontario Trillium Foundations goals is to encourage best practices in the social economy in Ontario.
+One of these best practices is transparency, and the Ontario Trillium Foundations transparency initiatives has been publication of its grants information as Open Data [Ontario Trillium Foundation Open Data](https://otf.ca/open).
+The OTF grant datasets provide a comprehensive view of funding through the foundation to social economy organizations serving individuals with disabilities in Ontario.
 
+## Research Questions answerable through the OTF Datasets
+
+**Primary Question:**
+
+1) Is there a difference between grants for organizations serving individuals with disabilities, and other grants, for the following parameters:
+* Number of grants
+* Dollar value of grants
+* Number of organizations
+
+**Secondary Question:**
+
+2) Do the datasets allow for intersectional analysis, e.g. grants supporting both disability and race?
+
+**Tertiary Question:**
+
+3) Do the available fields in the database e.g. Recipient Org:Charitable Registration Number allow combination with other datasets such as Revenue Canada’s T3010 database for analysis?
+
+Revenue Canada T3010 data is another dataset that requires more attention from social scientists, particularly social scientists researching charities in Canada and more broadly social economy organizations.
+Note that Revenue Canadas T3010 database is published as a searchable data base available to the public at: [Government of Canada - List of Charities - basic search](https://apps.cra-arc.gc.ca/ebci/hacc/srch/pub/dsplyBscSrch).
+In this document, a set of files available on request from Revenue Canada was utilized rather than the search pages.  The matching of data completed here is much more efficiently accomplished using the data files.
+The Revenue Canada T3010 data file was published 17 July 2020, and subsequently received through postal mail in the subsequent week.
+Revenue Canada T3010 data is not _required_ for the majority  of analysis completed here, and is not required to answer the primary and secondary research questions.
+Revenue Canada T3010 data is required to answer the tertiary question, proving it can be done here, and not the focus of effort.
+
+The downloadable OTF data sets were retrieved from: [Ontario Trillium Foundation Open Data](https://otf.ca/open) on June 26, 2020.
+There is an OTF Data Inventory which provides a list of all the datasets available from the same website
+Filename: otf_data_inventory_en
+
+
+### Files available for analysis from OTF as of June 26, 2020
+
+The following files are available for to answer the research question and subquestions:
+
+* Grants for the period between 2015 to 2020
+  * Filename: otf_granting_data_since_april_1_2015
+  * 3,105 grants (rows) of data
+* Youth Opportunities Fund Grants for the period between 2013 to 2020
+  * Filename: OTF_yof-granting-data
+  * 240 grants (rows) of data
+* Grants for the period between 1999 to 2015
+  * Filename: otf_granting_data_fiscal_year_2000-2015_20150717
+  * 22,686 grants (rows) of data
+* Cities in Ontario matched to an OTF catchment area.
+  * Filename: otf_catchment_area-cities_concordance_file
+  * 1129 cities (rows) of data
+  * o	The OTF catchment area is a geographical area in the province of Ontario that roughly corresponded to historical Local Health Integration Networks (LHINs)
+* (Statistics Canada) Census Divisions in Ontario matched to an OTF catchment area.
+ * Filename: otf_catchment_area-census_division_concordance_file
+ * 21 Census Divisions (rows) of data
+
+The most relevant OTF files for analysis to be completed for here are:
+
+1. otf_granting_data_since_april_1_2015
+2. OTF_yof-granting-data
+3. otf_granting_data_fiscal_year_2000-2015_20150717
+
+### Files provided for analysis from Revenue Canada as of 17 July 2020
+
+* T3010_2017ONBasicContactInfo
+* T3010_2017ONDirectors
+* T3010_2017ONFinancialInfo
+* T3010_2017ONGeneralInfo
+* T3010_2017ONNewOngoingPrograms
+* T3010_2017ONSchedule1
+* T3010_2017ONSchedule2
+* T3010_2017ONSchedule3
+* T3010_2017ONSchedule5
+* T3010_2017ONSchedule7PADescription
+* T3010_2017ONSchedule7PAOutsideCanada
+* T3010_2017ONSchedule7PAResources
+
+The most relevant Revenue Canada files for analysis to be completed here are:
+1. T3010_2017ONBasicContactInfo
+2. T3010_2017ONFinancialInfo
+
+All the Revenue Canada T3010 files are related to each other through the BN/Registration Number field.
+Therefore in connecting any other datasets to the Revenue Canada T3010 set of files, the BN/Registration Number has to be accurate and match Revenue Canada format.
+
+Some conventions:
+* In the remainder of this document, the files are referenced by their filename e.g. name_of_file.xyz rather than a log form description
+* In the remainder of this document, the English field names foreach field will be used for brevity, assuming that the French field names simply contain the same information, but in French.
+
+## Quality Issues and Detailed Methodology
+OTF grant data is not perfect or ‘clean’ data.
+There are missing fields, and incorrect data.
+But it is mostly complete and mostly accurate data, and in the absence of other sources of equivalent data, cleaning the dataset and filling in the missing values as much as possible is the best option.
+The steps required to clean the dataset to a reasonable level are outlined here. Although some of the steps may seem pedantic, it is similar to a science experiment, where the steps if rigorously reported in detail, can be replicated by other people to verify and validate the result.  One of the benefits of Open Data is the ability for multiple researchers to access to the same dataset and do different analyses, or do the same analyses to verify each others results (Peters, 2013).
+Social science researchers are notorious for not providing enough data or a detailed enough methodology that enables replication by others.
+OTF will benefit from the investment it has already made in releasing its grant data as open data by more researchers using the data.
+In some ways, reporting the detailed steps taken to clean up data in this thesis as a published and public document will encourage OTF to apply the same cleanup steps to upcoming releases for the dataset to make it cleaner and more accessible for all future researchers. More broadly OTF’s objective of transparency in the social economy will be supported by demonstrating the type of analysis that can be done by researchers on OTF Grant Open Data.
