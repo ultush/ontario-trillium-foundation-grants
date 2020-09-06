@@ -190,14 +190,119 @@ Grants where the Population Served was “People with Disabilities” was analyz
 
 _Table 2: Number Of Grants By Population Served And Fiscal Year_
 
-| Population Served                                  | 2015-2016 | 2016-2017 | 2017-2018 | 2018-2019 | 2019-2020 | (blank) | Grand Total |
-|----------------------------------------------------|-----------|-----------|-----------|-----------|-----------|---------|-------------|
-| Diverse Cultural Communities and Racialized Groups | 76        | 91        | 80        | 87        | 85        |         | 419         |
-| Francophones                                       | 29        | 10        | 19        | 18        | 13        |         | 89          |
-| General Populations                                | 390       | 400       | 321       | 345       | 362       |         | 1818        |
-| Indigenous or Aboriginal                           | 29        | 28        | 37        | 20        | 31        |         | 145         |
-| LGBTTQIA                                           | 2         | 10        | 12        | 9         | 6         |         | 39          |
-| People with Disabilities                           | 99        | 100       | 89        | 84        | 83        |         | 455         |
-| Senior                                             | 1         |           |           |           |           |         | 1           |
-| Women                                              | 33        | 26        | 27        | 23        | 22        |         | 131         |
-| Grand Total                                        | 659       | 665       | 585       | 586       | 602       |         | 3097        |
+| Population Served                                  | 2015-2016 | 2016-2017 | 2017-2018 | 2018-2019 | 2019-2020 | Grand Total |
+|----------------------------------------------------|-----------|-----------|-----------|-----------|-----------|-------------|
+| Diverse Cultural Communities and Racialized Groups | 76        | 91        | 80        | 87        | 85        | 419         |
+| Francophones                                       | 29        | 10        | 19        | 18        | 13        | 89          |
+| General Populations                                | 390       | 400       | 321       | 345       | 362       | 1818        |
+| Indigenous or Aboriginal                           | 29        | 28        | 37        | 20        | 31        | 145         |
+| LGBTTQIA                                           | 2         | 10        | 12        | 9         | 6         | 39          |
+| People with Disabilities                           | 99        | 100       | 89        | 84        | 83        | 455         |
+| Senior                                             | 1         |           |           |           |           | 1           |
+| Women                                              | 33        | 26        | 27        | 23        | 22        | 131         |
+| Grand Total                                        | 659       | 665       | 585       | 586       | 602       | 3097        |
+
+
+_Table 3: Number Of Grants By Population Served And Grant Programme_
+
+| Population Served                                  | Community Investments | Ontario150 Community Capital Program | Strategic Investments | Grand Total |
+|----------------------------------------------------|-----------------------|--------------------------------------|-----------------------|-------------|
+| Diverse Cultural Communities and Racialized Groups | 399                   | 12                                   | 8                     | 419         |
+| Francophones                                       | 88                    | 1                                    |                       | 89          |
+| General Populations                                | 1625                  | 137                                  | 56                    | 1818        |
+| Indigenous or Aboriginal                           | 137                   | 4                                    | 4                     | 145         |
+| LGBTTQIA                                           | 37                    | 1                                    | 1                     | 39          |
+| People with Disabilities                           | 404                   | 46                                   | 5                     | 455         |
+| Senior                                             |                       |                                      | 1                     | 1           |
+| Women                                              | 128                   | 3                                    |                       | 131         |
+| Grand Total                                        | 2818                  | 204                                  | 75                    | 3097        |
+
+
+_Table 4: Average of Amount Applied For per Grant By Population Served and Fiscal Year_
+
+| Population Served                         | 2015-2016 | 2016-2017 | 2017-2018 | 2018-2019 | 2019-2020 | Grand Total |
+|----------------------------------------------------|-----------|-----------|-----------|-----------|-----------|-------------|
+| Diverse Cultural Communities and Racialized Groups | 237,541   | 200,853   | 169,005   | 225,395   | 203,041   | 206,967     |
+| Francophones                                       | 123,072   | 81,080    | 224,505   | 185,544   | 157,446   | 157,664     |
+| General Populations                                | 144,200   | 132,029   | 157,505   | 141,643   | 160,225   | 146,577     |
+| Indigenous or Aboriginal                           | 130,452   | 180,114   | 135,568   | 228,525   | 183,361   | 166,186     |
+| LGBTTQIA                                           | 71,850    | 295,350   | 194,958   | 150,022   | 351,867   | 228,156     |
+| People with Disabilities                           | 150,614   | 155,250   | 203,875   | 141,876   | 151,713   | 160,638     |
+| Senior                                             | 10,000    |           |           |           |           | 10,000      |
+| Women                                              | 154,839   | 190,646   | 212,804   | 191,574   | 186,695   | 185,692     |
+| (blank)                                            |           | 62,563    |           |           |           | 62,563      |
+| Grand Total                                        | 154,503   | 149,894   | 170,241   | 160,513   | 169,106   | 160,435     |
+
+
+_Table 5: Average of Amount Awarded per Grant By Population Served and Fiscal Year_
+
+| Population Served                             | 2015-2016 | 2016-2017 | 2017-2018 | 2018-2019 | 2019-2020 | Grand Total |
+|----------------------------------------------------|-----------|-----------|-----------|-----------|-----------|-------------|
+| Diverse Cultural Communities and Racialized Groups | 237,541   | 200,853   | 169,005   | 225,395   | 203,041   | 206,967     |
+| Francophones                                       | 123,072   | 81,080    | 224,505   | 185,544   | 157,446   | 157,664     |
+| General Populations                                | 144,200   | 131,892   | 157,505   | 141,643   | 160,225   | 146,547     |
+| Indigenous or Aboriginal                           | 130,452   | 180,114   | 135,568   | 228,525   | 183,361   | 166,186     |
+| LGBTTQIA                                           | 71,850    | 295,350   | 194,958   | 150,022   | 351,867   | 228,156     |
+| People with Disabilities                           | 150,614   | 155,250   | 203,875   | 141,876   | 151,713   | 160,638     |
+| Senior                                             | 10,000    |           |           |           |           | 10,000      |
+| Women                                              | 154,839   | 190,646   | 212,804   | 191,574   | 186,695   | 185,692     |
+| (blank)                                            |           | 56,938    |           |           |           | 56,938      |
+| Grand Total                                        | 154,503   | 149,746   | 170,241   | 160,513   | 169,106   | 160,403     |
+
+
+_Table 6: Average of Planned Dates:Duration By Population Served And Fiscal Year_
+
+| Population Served                          | 2015-2016 | 2016-2017 | 2017-2018 | 2018-2019 | 2019-2020 | Grand Total |
+|----------------------------------------------------|-----------|-----------|-----------|-----------|-----------|-------------|
+| Diverse Cultural Communities and Racialized Groups | 21.72     | 19.31     | 18.90     | 20.16     | 20.44     | 20.07       |
+| Francophones                                       | 17.03     | 14.90     | 21.37     | 15.67     | 17.08     | 17.45       |
+| General Populations                                | 15.86     | 14.18     | 15.45     | 14.46     | 16.50     | 15.28       |
+| Indigenous or Aboriginal                           | 14.24     | 16.68     | 13.81     | 16.65     | 14.23     | 14.93       |
+| LGBTTQIA                                           | 11.50     | 21.80     | 16.00     | 16.44     | 24.00     | 18.59       |
+| People with Disabilities                           | 17.07     | 14.34     | 18.17     | 14.08     | 16.24     | 15.98       |
+| Senior                                             | 12.00     |           |           |           |           | 12.00       |
+| Women                                              | 20.12     | 19.96     | 21.59     | 18.74     | 21.05     | 20.31       |
+| (blank)                                            |           | 12.75     |           |           |           | 12.75       |
+| Grand Total                                        | 16.89     | 15.33     | 16.72     | 15.56     | 17.15     | 16.32
+
+
+_Table 7: Population Served By Program Area_
+
+| Population Served                                  | Active People | Connected People | Green People | Inspired People | Promising Young People | Prosperous People | (blank) | Grand Total |
+|----------------------------------------------------|---------------|------------------|--------------|-----------------|------------------------|-------------------|---------|-------------|
+| Diverse Cultural Communities and Racialized Groups | 30            | 113              | 15           | 77              | 118                    | 65                | 1       | 419         |
+| Francophones                                       | 12            | 22               | 1            | 30              | 15                     | 9                 |         | 89          |
+| General Populations                                | 460           | 230              | 265          | 381             | 224                    | 250               | 8       | 1818        |
+| Indigenous or Aboriginal                           | 8             | 31               | 7            | 44              | 31                     | 24                |         | 145         |
+| LGBTTQIA                                           |               | 18               |              | 3               | 13                     | 5                 |         | 39          |
+| People with Disabilities                           | 103           | 186              |              | 43              | 66                     | 57                |         | 455         |
+| Senior                                             |               | 1                |              |                 |                        |                   |         | 1           |
+| Women                                              | 9             | 36               |              | 6               | 19                     | 61                |         | 131         |
+| Grand Total                                        | 622           | 637              | 288          | 584             | 486                    | 471               | 9       | 3097        |
+
+
+_Table 8: Population Served by Budget Fund_
+
+| Population Served                                  | Capital | Collective Impact | Grow | Ontario150 | Provincial Impact | Seed | Grand Total |
+|----------------------------------------------------|---------|-------------------|------|------------|-------------------|------|-------------|
+| Diverse Cultural Communities and Racialized Groups | 56      | 8                 | 163  | 12         | 4                 | 176  | 419         |
+| Francophones                                       | 22      |                   | 24   | 1          | 3                 | 39   | 89          |
+| General Populations                                | 613     | 56                | 433  | 137        | 18                | 561  | 1818        |
+| Indigenous or Aboriginal                           | 31      | 4                 | 31   | 4          | 1                 | 74   | 145         |
+| LGBTTQIA                                           | 4       | 1                 | 13   | 1          |                   | 20   | 39          |
+| People with Disabilities                           | 134     | 5                 | 114  | 46         | 4                 | 152  | 455         |
+| Senior                                             |         | 1                 |      |            |                   |      | 1           |
+| Women                                              | 15      |                   | 53   | 3          | 3                 | 57   | 131         |
+| Grand Total                                        | 875     | 75                | 831  | 204        | 33                | 1079 | 3097        |
+
+
+_Table 9: Grants by Age Group and Population Served_
+
+| Population Served                                  | Children up to 12 years | Children up to 12 years;Youth | Youth | Adults (25-64) | Adults; Seniors (65+) | General population (all age groups) | Seniors (+65) | (blank) | Grand Total |
+|----------------------------------------------------|-------------------------|-------------------------------|-------|----------------|-----------------------|-------------------------------------|---------------|---------|-------------|
+| Diverse Cultural Communities and Racialized Groups | 65                      |                               | 134   | 67             |                       | 118                                 | 35            |         | 419         |
+| Francophones                                       | 16                      |                               | 27    | 8              |                       | 28                                  | 10            |         | 89          |
+| General Populations                                | 223                     | 2                             | 316   | 149            |                       | 1030                                | 97            | 1       | 1818        |
+| Indigenous or Aboriginal                           | 14                      | 1                             | 36    | 12             |                       | 82                                  |               |         | 145         |
+| LGBTTQIA                                           | 1                       |                               | 22    | 5              |                       | 9                                   | 2             |         | 39          |
+| People with Disabilities                           | 42                      | 1                             | 78    | 118            | 1                     | 153                                 | 62            |         | 455         |
