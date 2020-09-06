@@ -136,3 +136,68 @@ Records using “LGBTQIA” were combined with records using “LGBTQ+”, and f
 In most cases a different description or a description independent of existing descriptions used in grant records was not used.  Usually the more commonly used or broader term was used.
 
 ![Figure 1: Example 1 Clustering data using Open Refine](Fig-1-Example1-Clustering-data-using-Open-Refine.png)*Figure 1: Example 1 Clustering data using Open Refine*
+
+e.g. In the following step in OpenRefine Facet clustering in the field Population Served:
+Records using “Indigenous or Aboriginal” were combined with records using “Indigenous”, and for the purpose of analysis the description “Indigenous or Aboriginal” was used.
+
+![Figure 2: Example 2 Clustering data using Open Refine](Fig-2-Example2-Clustering-data-using-Open-Refine.png)*Figure 2: Example 2 Clustering data using Open Refine.png*
+
+### Fields not used for further analysis
+
+Data in all fields used for analysis need to be cleaned up.
+Therefore, to minimize unnecessary cleanup effort it is useful to identify fields which will not be used for further analysis.  The following fields are mostly common across all grants, so they are not included for further analysis
+* Funding Org: commonly “Ontario Trillium Foundation”
+* Country Served: commonly “Canada”
+
+The following are internal OTF administrative data such as a unique identifier for each grant, that is not for the purposes of this analysis
+* Identifier
+* Organization name
+* Submission date
+* Approval date
+* Cross-catchment indicator
+* Geographical Area Served
+* Recipient Org:City
+* Recipient Org:Postal Code
+* Co-Application
+* Rescinded/Recovered
+* Rescinded/Recovered Initiated By
+* Amount Rescinded/Recovered
+* Last modified
+
+One might think “Organization name” is an important field in determining for example the number of grants received per organization.
+Since organization names are prone to data entry errors, the more exact Recipient Org:Incorporation Number and Recipient Org:Charitable Registration Number are used for organization level analysis.
+Similarly, one might think Postal code is a useful field e.g. the United Way report, Poverty by Postal Code: The geography of neighbourhood poverty (https://www.unitedwaygt.org/research-and-reports), was a seminal report.
+But in this case, the postal code provided in the file otf_granting_data_since_april_1_2015 is the **head office** of the grant recipient organization.
+Geographical area served better indicator, but it is a wide area based on LHINs, which is too broad a geographical area for analysis.
+
+### Fields used for further analysis
+In the file otf_granting_data_since_april_1_2015:¬
+The primary field including data to determine if the grant is related to **disability** is:
+* Population Served
+
+Grants where the Population Served was “People with Disabilities” was analyzed for differences in the following fields.  
+* Fiscal Year
+* Grant Programme
+* Amount Applied For
+* Amount Awarded
+* Planned Dates:Duration (months)
+* Description (English)
+* Program Area
+* Budget Fund
+* Age Group
+* Recipient Org:Incorporation Number
+* Recipient Org:Charitable Registration Number
+
+_Table 2: Number Of Grants By Population Served And Fiscal Year_
+
+| Population Served                                  | 2015-2016 | 2016-2017 | 2017-2018 | 2018-2019 | 2019-2020 | (blank) | Grand Total |
+|----------------------------------------------------|-----------|-----------|-----------|-----------|-----------|---------|-------------|
+| Diverse Cultural Communities and Racialized Groups | 76        | 91        | 80        | 87        | 85        |         | 419         |
+| Francophones                                       | 29        | 10        | 19        | 18        | 13        |         | 89          |
+| General Populations                                | 390       | 400       | 321       | 345       | 362       |         | 1818        |
+| Indigenous or Aboriginal                           | 29        | 28        | 37        | 20        | 31        |         | 145         |
+| LGBTTQIA                                           | 2         | 10        | 12        | 9         | 6         |         | 39          |
+| People with Disabilities                           | 99        | 100       | 89        | 84        | 83        |         | 455         |
+| Senior                                             | 1         |           |           |           |           |         | 1           |
+| Women                                              | 33        | 26        | 27        | 23        | 22        |         | 131         |
+| Grand Total                                        | 659       | 665       | 585       | 586       | 602       |         | 3097        |
