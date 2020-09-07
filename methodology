@@ -8,7 +8,7 @@ The OTF grant datasets provide a comprehensive view of funding through the found
 
 **Primary Question:**
 
-1) Is there a difference between grants for organizations serving individuals with disabilities, and other grants, for the following parameters:
+1) Is there a difference between grants for organizations serving **individuals with disabilities**, and other grants, for the following parameters:
 * Number of grants
 * Dollar value of grants
 * Number of organizations
@@ -33,7 +33,7 @@ There is an OTF Data Inventory which provides a list of all the datasets availab
 Filename: otf_data_inventory_en
 
 
-### Files available for analysis from OTF as of June 26, 2020
+### Files available for analysis from OTF as of September 6, 2020
 
 The following files are available for to answer the research question and subquestions:
 
@@ -60,7 +60,7 @@ The most relevant OTF files for analysis to be completed for here are:
 2. OTF_yof-granting-data
 3. otf_granting_data_fiscal_year_2000-2015_20150717
 
-### Files provided for analysis from Revenue Canada as of 17 July 2020
+### Files provided for analysis from Revenue Canada as of 31 July 2020
 
 * T3010_2017ONBasicContactInfo
 * T3010_2017ONDirectors
