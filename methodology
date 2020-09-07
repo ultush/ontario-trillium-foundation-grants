@@ -93,13 +93,14 @@ Some conventions:
 4.	The complete list of fields available in: T3010_2017ONBasicContactInfo are listed in Appendix E
 5.	The complete list of fields available in: T3010_2017ONFinancialInfo are listed in Appendix F
 
+It is useful to note here that the fields available and content available in each field both enable and limit the analysis possible @williamsCrimeSensingBig2017.  For example where the “Population Served” field contains the content “Disability”, we can perform analysis on grants that can be separated out by this parameter.  On the other hand, if the “Population Served” field contains the content “Disability”, but the field does not include any other content e.g. “Intellectual Disability”, or “Developmental Disability”, then no further analysis can be performed on Intellectual or Developmental Disability. As we shall see, the different datasets available from OTF allow different types of analysis.
 
 ## Quality Issues and Detailed Methodology
 OTF grant data is not perfect or ‘clean’ data.
-There are missing fields, and incorrect data.
+There are missing fields, and incorrectly entered data.
 But it is mostly complete and mostly accurate data, and in the absence of other sources of equivalent data, cleaning the dataset and filling in the missing values as much as possible is the best option.
-The steps required to clean the dataset to a reasonable level are outlined here. Although some of the steps may seem pedantic, it is similar to a science experiment, where the steps if rigorously reported in detail, can be replicated by other people to verify and validate the result.
-One of the benefits of Open Data is the ability for multiple researchers to access to the same dataset and do different analyses, or do the same analyses to verify each others results (Peters, 2013).
+The steps required to clean the dataset to a reasonable level of utility are outlined here. Although some of the steps may seem pedantic, applying Open Science methodology is similar to a physics, chemistry or biology science experiment, where the steps if rigorously reported in detail, can be replicated by other people to verify and validate the result.
+One of the benefits of Open Data is the ability for multiple researchers to access to the same dataset and do different analyses, or do the same analyses to verify each others results @petersPROSPECTSOPENSCIENCE2013.
 Social science researchers are notorious for not providing enough data or a detailed enough methodology that enables replication by others.
 OTF will benefit from the investment it has already made in releasing its grant data as open data by more researchers using the data.
 In some ways, reporting the detailed steps taken to clean up data in this thesis as a published and public document will encourage OTF to apply the same cleanup steps to upcoming releases for the dataset to make it cleaner and more accessible for all future researchers.
@@ -130,17 +131,31 @@ For example, the following terms mean the same thing for the purposes of analysi
 2.	Individuals with disabilities
 And therefore when counting the number of records, we need to be able to count all records with both these term together, in other words “cluster” them together.
 
+
+e.g. In the following step in OpenRefine Facet clustering in the field Geographical Area Served clusters together records with “Waterloo, Wellington, Dufferin” with “Waterloo, Wellington, & Dufferin”  so that all records are updated to “Waterloo, Wellington, Dufferin”.
+
+![Figure 1: Clustering data using Open Refine in Field Geographical Area Served](Fig1-Clustering-data-using-Open-Refine-in-Field-Geographical-Area-Served.png)*Figure 1: Clustering data using Open Refine in Field Geographical Area Served*
+
+
+e.g. In the following step in OpenRefine Facet clustering in the field Organizational Name clusters together records with content “FarmStart” with records with content “Farmstart”  so that all records are updated to “FarmStart”.  Through the same dialog OpenRefine Facet clustering in the field Organizational Name clusters together records with content “Community Innovation Lab” with records with content “community innovation lab” so that all records are updated to “Community Innovation Lab”.  Therefore OpenRefine clustering can be used to cluster multiple similar records together during the same step.
+
+![Figure 2: Clustering data using Open Refine in Field Organization Name](Fig2-Clustering-data-using-Open-Refine-in-Field-Organizaiton-Name.png)*Figure 2: Clustering data using Open Refine in Field Organization Name*
+
+Clustering of similar records should be completed with caution, so that differences that are relevant for analysis are not lost through clustering.  Since this thesis is focused on people with disabilities, therefore some of the other nuances in data can be reduced.
+e.g. In the following step in OpenRefine Facet clustering in the field Population Served:
+Records using “Diverse Cultural Communities and Racial Groups” were combined with records using “Diverse Cultural Communities”, and for the purpose of analysis the description “Diverse Cultural Communities and Racial Groups” was used.
+
+For those performing similar analysis with a focus on diverse communities and racial groups, keeping these records as distinct differences, may be relevant.
+
 e.g. In the same step in OpenRefine Facet clustering in the field Population Served:
 Records using “LGBTQIA” were combined with records using “LGBTQ+”, and for the purpose of analysis the description “LGBTQIA” was used.
 
-In most cases a different description or a description independent of existing descriptions used in grant records was not used.  Usually the more commonly used or broader term was used.
-
-![Figure 1: Example 1 Clustering data using Open Refine](Fig-1-Example1-Clustering-data-using-Open-Refine.png)*Figure 1: Example 1 Clustering data using Open Refine*
+For those performing similar analysis with a focus on LGBTQ2SIA+ communities, keeping these records as distinct differences may be relevant.
 
 e.g. In the following step in OpenRefine Facet clustering in the field Population Served:
 Records using “Indigenous or Aboriginal” were combined with records using “Indigenous”, and for the purpose of analysis the description “Indigenous or Aboriginal” was used.
 
-![Figure 2: Example 2 Clustering data using Open Refine](Fig-2-Example2-Clustering-data-using-Open-Refine.png)*Figure 2: Example 2 Clustering data using Open Refine.png*
+For those performing similar analysis with a focus on Indigenous and Aboriginal communities, keeping these records as distinct differences may be relevant.
 
 ### Fields not used for further analysis
 
