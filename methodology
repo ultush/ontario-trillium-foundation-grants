@@ -116,7 +116,7 @@ The reason the cleanest dataset is selected is that data cleanup processes are a
 If we can perform analysis with a lower level of cleanup, the dataset more valuable on the utility vs effort scale.
 We can also take lessons learned from analyzing the cleanest dataset and apply them to datasets that require more effort for cleanup and analysis
 
-## OpenRefine
+## OpenRefine for data cleanup
 
 OpenRefine is a free, Open Source tool available to everyone for data analysis at [OpenRefine](https://openrefine.org/).
 Since OpenRefine is a tool specifically designed for cleaning up and analyzing data, it provides a number of powerful features.
@@ -157,6 +157,31 @@ Records using “Indigenous or Aboriginal” were combined with records using �
 
 For those performing similar analysis with a focus on Indigenous and Aboriginal communities, keeping these records as distinct differences may be relevant.
 
+
+##Data cleanup effort vs. utility##
+
+All fields in each data set do not require an equivalent level of data cleanup effort.  In some cases, the fields are already “clean” and do not require any further cleanup in the form of clustering or transformations. For example, in the file otf_granting_data_since_april_1_2015, the fields Fiscal Year and Grant Programme do not appear to have any obvious errors, and therefore do not require further cleanup.  
+
+In other cases the entire field contains either erroneous data. For example, in the file otf_granting_data_since_april_1_2015, contains error values including formulas such as “=AC609-SUM(#REF!,#REF!)”, which is probably some artifact of an internal process, that was not removed when publishing the dataset.  This field was deleted in its entirety to ensure it does not confound any further analysis.
+
+In still other cases the field contains data that is not valuable for the purpose of the analysis to be completed.  For example in the file otf_granting_data_since_april_1_2015, the field Funding Org has the same value across all records: “Ontario Trillium Foundation”. Similarly, the field Country Served: has the same value across all records: “Canada”.  These fields can easily be excluded from any further analysis.
+
+Finally, the fields that are used in further analysis can be classified further classification by level of effort to be invested in cleanup.  For example, in the file otf_granting_data_since_april_1_2015, the following fields require different levels of cleanup effort:
+•	Organization name
+•	Recipient Org:Incorporation Number
+•	Recipient Org:Charitable Registration Number
+Organization Name typically contains many data entry errors, so a **low** level of effort was invested in cleaning up the Organization Name field (clusters only).
+Other identifying fields including Incorporation Number and Charitable Registration Number will be used to differentiate organizations, in the context of this thesis which is focused on social economy organizations.
+Recipient Org:Incorporation Number is a useful identifier for linking to other business related data, but no additional linked data analysis is planned for this thesis using this field, and therefore, a **medium** level of effort was invested in cleaning up the Recipient Org:Incorporation Number field (clusters and transformations).
+Recipient Org:Charitable Registration Number is an important field as a unique identifier for linking to Revenue Canada T3010 charity data.
+As previously mentioned, valuable healthcare research involving individuals with intellectual and developmental disabilities has been conducted using linked data (Arim, et. al. 2019; Shooshtari, 2017).
+Since some linked data analysis is planned as a tertiary question as part of this thesis, a **high** level of effort was invested in cleaning up the Recipient Org:Charitable Registration Number field (clusters and transformations and manual edits).
+A note of caution, that aiming for perfection or no errors is often not an attainable without unlimited time and other resources.
+Therefore there is a level of “cleanliness” or “error-freeness which is adequate for analysis.
+For example, for the Recipient Org:Charitable Registration Number field, a 95% clean or 5% detectable error rate was targeted.
+The detailed steps for cleanup of the Recipient Org:Charitable Registration Number field is provided in the appendix of JSON outputs from OpenRefine, where the steps were captured, and subsequently a listing of manual cleanup steps that OpenRefine did not capture (the version of OpenRefine used allows manual changes to individual cells, but does not capture a history of these manual changes).
+
+
 ### Fields not used for further analysis
 
 Data in all fields used for analysis need to be cleaned up.
@@ -181,9 +206,13 @@ The following are internal OTF administrative data such as a unique identifier f
 
 One might think “Organization name” is an important field in determining for example the number of grants received per organization.
 Since organization names are prone to data entry errors, the more exact Recipient Org:Incorporation Number and Recipient Org:Charitable Registration Number are used for organization level analysis.
+Therefore more cleanup time was invested into the fields Org:Incorporation Number and Recipient Org:Charitable Registration Number, than into Organization Name.
+
 Similarly, one might think Postal code is a useful field e.g. the United Way report, Poverty by Postal Code: The geography of neighbourhood poverty (https://www.unitedwaygt.org/research-and-reports), was a seminal report.
 But in this case, the postal code provided in the file otf_granting_data_since_april_1_2015 is the **head office** of the grant recipient organization.
 Geographical area served better indicator, but it is a wide area based on LHINs, which is too broad a geographical area for analysis.
+
+
 
 ### Fields used for further analysis
 In the file otf_granting_data_since_april_1_2015:¬
@@ -202,6 +231,10 @@ Grants where the Population Served was “People with Disabilities” was analyz
 * Age Group
 * Recipient Org:Incorporation Number
 * Recipient Org:Charitable Registration Number
+
+
+
+
 
 _Table 2: Number Of Grants By Population Served And Fiscal Year_
 
