@@ -1,6 +1,7 @@
 # Ontario Trillium Foundation Grant Funding Analysis Methodology
 
-Ontario Trillium Foundation (OTF) is the largest grant foundation in Canada, and as a foundation entirely dependent on Ontario government funding,it is an instrument of government policy through granting priorities in the social economy. One of Ontario Trillium Foundations goals is to encourage best practices in the social economy in Ontario.
+Ontario Trillium Foundation (OTF) is the largest grant foundation in Canada, and as a foundation entirely dependent on Ontario government funding,it is an instrument of government policy through granting priorities in the social economy.
+One of Ontario Trillium Foundations goals is to encourage best practices in the social economy in Ontario.
 One of these best practices is transparency, and the Ontario Trillium Foundations transparency initiatives has been publication of its grants information as Open Data [Ontario Trillium Foundation Open Data](https://otf.ca/open).
 The OTF grant datasets provide a comprehensive view of funding through the foundation to social economy organizations serving individuals with disabilities in Ontario.
 
@@ -354,3 +355,728 @@ _Table 9: Grants by Age Group and Population Served_
 | Indigenous or Aboriginal                           | 14                      | 1                             | 36    | 12             |                       | 82                                  |               |         | 145         |
 | LGBTTQIA                                           | 1                       |                               | 22    | 5              |                       | 9                                   | 2             |         | 39          |
 | People with Disabilities                           | 42                      | 1                             | 78    | 118            | 1                     | 153                                 | 62            |         | 455         |
+
+
+# Appendix G:JSON Code for otf_granting_data_since_april_1_2015 Data cleanup in [OpenRefine](https://openrefine.org/)
+
+All 48 data updates!
+
+```JSON
+[
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Geographical Area Served:Région servis",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Waterloo, Wellington, Dufferin",
+          "Waterloo, Wellington & Dufferin"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Waterloo, Wellington, Dufferin"
+      }
+    ],
+    "description": "Mass edit cells in column Geographical Area Served:Région servis"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Organization name:Nom d'organisme",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "FarmStart",
+          "Farmstart"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FarmStart"
+      },
+      {
+        "from": [
+          "Community Innovation Lab",
+          "community innovation lab"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Community Innovation Lab"
+      }
+    ],
+    "description": "Mass edit cells in column Organization name:Nom d'organisme"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Program Area:Région de programme",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Prosperous People",
+          "Prosperous people"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Prosperous People"
+      }
+    ],
+    "description": "Mass edit cells in column Program Area:Région de programme"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Recipient Org:Incorporation Number:Org du bénéficiaires: Numéro d'incorporation",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Recipient Org:Incorporation Number:Org du bénéficiaires: Numéro d'incorporation using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Recipient Org:Incorporation Number:Org du bénéficiaires: Numéro d'incorporation",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Recipient Org:Incorporation Number:Org du bénéficiaires: Numéro d'incorporation using expression value.replace(/\\s+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Recipient Org:Incorporation Number:Org du bénéficiaires: Numéro d'incorporation",
+    "expression": "value.replace(\"Ontario\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Recipient Org:Incorporation Number:Org du bénéficiaires: Numéro d'incorporation using expression value.replace(\"Ontario\",\"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Recipient Org:Incorporation Number:Org du bénéficiaires: Numéro d'incorporation",
+    "expression": "value.replace(/\\bCorp\\b/,\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Recipient Org:Incorporation Number:Org du bénéficiaires: Numéro d'incorporation using expression value.replace(/\\bCorp\\b/,\"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Recipient Org:Incorporation Number:Org du bénéficiaires: Numéro d'incorporation",
+    "expression": "value.replace(\"Corporation\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Recipient Org:Incorporation Number:Org du bénéficiaires: Numéro d'incorporation using expression value.replace(\"Corporation\",\"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Recipient Org:Incorporation Number:Org du bénéficiaires: Numéro d'incorporation",
+    "expression": "value.replace(\"#\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Recipient Org:Incorporation Number:Org du bénéficiaires: Numéro d'incorporation using expression value.replace(\"#\",\"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Recipient Org:Incorporation Number:Org du bénéficiaires: Numéro d'incorporation",
+    "expression": "value.replace(/number/i,\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Recipient Org:Incorporation Number:Org du bénéficiaires: Numéro d'incorporation using expression value.replace(/number/i,\"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Recipient Org:Incorporation Number:Org du bénéficiaires: Numéro d'incorporation",
+    "expression": "value.replace(\"(\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Recipient Org:Incorporation Number:Org du bénéficiaires: Numéro d'incorporation using expression value.replace(\"(\",\"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Recipient Org:Incorporation Number:Org du bénéficiaires: Numéro d'incorporation",
+    "expression": "value.replace(\")\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Recipient Org:Incorporation Number:Org du bénéficiaires: Numéro d'incorporation using expression value.replace(\")\",\"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Recipient Org:Incorporation Number:Org du bénéficiaires: Numéro d'incorporation",
+    "expression": "value.replace(\",\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Recipient Org:Incorporation Number:Org du bénéficiaires: Numéro d'incorporation using expression value.replace(\",\",\"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Recipient Org:Incorporation Number:Org du bénéficiaires: Numéro d'incorporation",
+    "expression": "value.replace(/\\bProv\\b/,\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Recipient Org:Incorporation Number:Org du bénéficiaires: Numéro d'incorporation using expression value.replace(/\\bProv\\b/,\"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Recipient Org:Incorporation Number:Org du bénéficiaires: Numéro d'incorporation",
+    "expression": "value.replace(\"BN\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Recipient Org:Incorporation Number:Org du bénéficiaires: Numéro d'incorporation using expression value.replace(\"BN\",\"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Recipient Org:Incorporation Number:Org du bénéficiaires: Numéro d'incorporation",
+    "expression": "value.replace(\"ON\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Recipient Org:Incorporation Number:Org du bénéficiaires: Numéro d'incorporation using expression value.replace(\"ON\",\"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Recipient Org:Incorporation Number:Org du bénéficiaires: Numéro d'incorporation",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Recipient Org:Incorporation Number:Org du bénéficiaires: Numéro d'incorporation using expression value.trim()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Recipient Org:Incorporation Number:Org du bénéficiaires: Numéro d'incorporation",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Municipality",
+          "municipality"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Municipality"
+      }
+    ],
+    "description": "Mass edit cells in column Recipient Org:Incorporation Number:Org du bénéficiaires: Numéro d'incorporation"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Recipient Org:Incorporation Number:Org du bénéficiaires: Numéro d'incorporation",
+          "expression": "value",
+          "columnName": "Recipient Org:Incorporation Number:Org du bénéficiaires: Numéro d'incorporation",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "338776",
+                "l": "338776"
+              }
+            },
+            {
+              "v": {
+                "v": "0338776",
+                "l": "0338776"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Recipient Org:Incorporation Number:Org du bénéficiaires: Numéro d'incorporation",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "0338776",
+          "338776"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "0338776"
+      }
+    ],
+    "description": "Mass edit cells in column Recipient Org:Incorporation Number:Org du bénéficiaires: Numéro d'incorporation"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Recipient Org:Incorporation Number:Org du bénéficiaires: Numéro d'incorporation",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "1009062",
+          "10090602"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1009062"
+      }
+    ],
+    "description": "Mass edit cells in column Recipient Org:Incorporation Number:Org du bénéficiaires: Numéro d'incorporation"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Recipient Org:City:Org du bénéficiaires:Ville",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Recipient Org:City:Org du bénéficiaires:Ville using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance using expression value.replace(/\\s+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance",
+    "expression": "value.replace(\"-\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance using expression value.replace(\"-\",\"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance",
+    "expression": "value.replace(\"#\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance using expression value.replace(\"#\",\"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance",
+    "expression": "grel:value.replace(\"BN\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance using expression grel:value.replace(\"BN\",\"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance",
+    "expression": "value.replace(\":\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance using expression value.replace(\":\",\"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance",
+    "expression": "value.replace(\".\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance using expression value.replace(\".\",\"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance",
+    "expression": "value.replace(\"rr\",\"RR\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance using expression value.replace(\"rr\",\"RR\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance",
+    "expression": "value.replace(\"• Canada Revenue Agency Registration\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance using expression value.replace(\"• Canada Revenue Agency Registration\",\"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance",
+    "expression": "value.replace(\"(incorporatedJune27,1956)\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance using expression value.replace(\"(incorporatedJune27,1956)\",\"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance",
+    "expression": "value.replace(\"(incorporated June 27, 1956)\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance using expression value.replace(\"(incorporated June 27, 1956)\",\"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance",
+    "expression": "value.replace(\"Letters Patent 253788\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance using expression value.replace(\"Letters Patent 253788\",\"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance",
+    "expression": "value.replace(\"RR001\",\"RR0001\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance using expression value.replace(\"RR001\",\"RR0001\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance",
+    "expression": "value.replace(\"RC\",\"RR\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance using expression value.replace(\"RC\",\"RR\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance",
+    "expression": "value.replace(\"RT\",\"RR\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance using expression value.replace(\"RT\",\"RR\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance",
+    "expression": "value.replace(\"RP\",\"RR\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance using expression value.replace(\"RP\",\"RR\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance",
+    "expression": "value.replace(\"r\",\"R\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance using expression value.replace(\"r\",\"R\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance",
+    "expression": "value.replace(\"RRR\",\"RR\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance using expression value.replace(\"RRR\",\"RR\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance",
+    "expression": "value.replace(\"RR001\",\"RR0001\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance using expression value.replace(\"RR001\",\"RR0001\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance",
+    "expression": "value.replace(\"000RR\",\"RR0001\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance using expression value.replace(\"000RR\",\"RR0001\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance",
+    "expression": "value.replace(\"RR00014\",\"RR0001\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance using expression value.replace(\"RR00014\",\"RR0001\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance",
+    "expression": "value.replace(\"107761694 RR 0194\",\"107761694RR0028\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance using expression value.replace(\"107761694 RR 0194\",\"107761694RR0028\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance",
+    "expression": "value.replace(\"11930 3782 RR 0001 1951\",\"119303782RR0001\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance using expression value.replace(\"11930 3782 RR 0001 1951\",\"119303782RR0001\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance",
+    "expression": "value.replace(\"RR 0001\",\"RR0001\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance using expression value.replace(\"RR 0001\",\"RR0001\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance",
+    "expression": "grel:value.replace(\" RR0001\",\"RR0001\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance using expression grel:value.replace(\" RR0001\",\"RR0001\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance",
+    "expression": "grel:value.replace(\" \",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance using expression grel:value.replace(\" \",\"\")"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "113412114RR0001",
+          "133412114RR0001"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "113412114RR0001"
+      }
+    ],
+    "description": "Mass edit cells in column Recipient Org:Charitable Registration Number: Org du bénéficiaires:Numéro d'enregistrement d'organisme de bienfaisance"
+  }
+]
+```
