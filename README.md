@@ -26,3 +26,6 @@ So I am always open to suggestions for different methods and tools as part of my
 The **original** Ontario Trillium Foundation (OTF) Grant Open Data files used for analysis can be found here:
 [Ontario Trillium Foundation Open Data](https://otf.ca/open)
 Of course, the OTF files are updated frequently, and will differ based on when you download them, so they will differ from my version which were downloaded September 6, 2020.
+
+The newest iteration of my methodology is available [here](https://github.com/ultush/ontario-trillium-foundation-grants/blob/master/methodology)
+Open to feedback!
