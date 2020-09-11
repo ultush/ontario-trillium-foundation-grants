@@ -23,9 +23,10 @@ Some of these tools are relatively new  to me, so I will probably doing tasks no
 Additionally in keeping with the Open philosophy, I will preferentially use Open Source tools, and will eventually build the relevant competence to replace the proprietary tools I am still using to implement a completely Open Source tool based analysis process.
 So I am always open to suggestions for different methods and tools as part of my learning journey.
 
-The **original** Ontario Trillium Foundation (OTF) Grant Open Data files used for analysis can be found here:
-[Ontario Trillium Foundation Open Data](https://otf.ca/open)
-Of course, the OTF files are updated frequently, and will differ based on when you download them, so they will differ from my version which were downloaded September 6, 2020.
+The **original** Ontario Trillium Foundation (OTF) Grant Open Data files used for analysis were downloaded from this website:
+[Ontario Trillium Foundation Open Data](https://otf.ca/open). 
+Of course, the OTF files are updated frequently, and will differ based on when you download them, so they will differ from the version I downloaded on September 6, 2020.
+The file used for applying methodology and analysis can be found here: [otf_granting_data_since_april_1_2015_original2](https://github.com/ultush/ontario-trillium-foundation-grants/blob/master/otf_granting_data_since_april_1_2015_original2.csv)
 
 The newest iteration of my methodology is available [here](https://github.com/ultush/ontario-trillium-foundation-grants/blob/master/methodology)
 Open to feedback!
