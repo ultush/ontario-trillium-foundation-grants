@@ -1,11 +1,12 @@
 # Ontario Trillium Foundation Grant Open Data Analysis
 
 
-As part of my PhD thesis, I am analyzing Ontario Trillium Foundation Grants and applying a disability lens to Open Data.   
+As part of my PhD thesis, I am analyzing Ontario Trillium Foundation Grants and applying an equity seeking community lens to Open Data.
+My primary research interest is applying a disability lens to the data, followed by additional intersectional perspectives of race/ethnicity, age, gender etc. 
 This GitHub repository shares the methodology and analysis with the aims of:
 
-1. Demonstrating that Open Data analysis is a valuable tool for social scientists, to encourage more social scientists to research Open Data
-2. Demonstrating that Open Data cleanup tasks are easier than often assumed, to encourage more use of Open Data
+1. Demonstrating that administration Open Data analysis is a valuable tool for social scientists, to encourage more social scientists to research Open Data
+2. Demonstrating that administration Open Data cleanup tasks are easier than often assumed, to encourage more use of Open Data
 3. As an Open Science methodology, enabling feedback on both methodology and analysis as continuous improvement of the process and results.
 
 I will be using the following tools, starting with the tools that require the shortest learning curve from my current skillset:
@@ -14,11 +15,11 @@ I will be using the following tools, starting with the tools that require the sh
 * [Atom](https://atom.io/) (text editor used to create this file)
 * [OpenRefine](https://openrefine.org/) (to clean up data)
 * [Zotero](https://www.zotero.org/) (to manage citations)
+* [RStudio](https://rstudio.com/) (for analysis of data) 
 * Microsoft Excel (for analysis including Pivot Tables)
 * Microsoft Word (to publish the thesis)
 
-One can probably use Microsoft Excel and Microsoft Word for most of the tasks to be completed, but I have found tools such as OpenRefine
-have significantly improved my productivity, and they are relatively easy to learn.
+One can probably use Microsoft Excel and Microsoft Word for most of the tasks to be completed, but I have found tools such as OpenRefine have significantly improved my productivity, and they are relatively easy to learn.
 Some of these tools are relatively new  to me, so I will probably doing tasks not using the best or most efficient method, but that is part of my learning process.
 Additionally in keeping with the Open philosophy, I will preferentially use Open Source tools, and will eventually build the relevant competence to replace the proprietary tools I am still using to implement a completely Open Source tool based analysis process.
 So I am always open to suggestions for different methods and tools as part of my learning journey.
