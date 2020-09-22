@@ -1,11 +1,14 @@
 # Ontario Trillium Foundation Grant Funding Analysis Methodology
 
-Ontario Trillium Foundation (OTF) is the largest grant foundation in Canada, and as a foundation entirely dependent on Ontario government funding,it is an instrument of government policy through granting priorities in the social economy.
+Ontario Trillium Foundation (OTF) is the largest grant foundation in Canada, and as a foundation entirely dependent on Ontario government funding, it is an instrument of government policy through granting priorities in the social economy.
 One of Ontario Trillium Foundations goals is to encourage best practices in the social economy in Ontario.
-One of these best practices is transparency, and the Ontario Trillium Foundations transparency initiatives has been publication of its grants information as Open Data [Ontario Trillium Foundation Open Data](https://otf.ca/open).
-The OTF grant datasets provide a comprehensive view of funding through the foundation to social economy organizations serving individuals with disabilities in Ontario.
+One of these best practices is transparency, and one of the OTFs transparency initiatives has been publication of its grant administration information as Open Data [Ontario Trillium Foundation Open Data](https://otf.ca/open).  
+The information available on OTF grants is considered to be administrative data.
+The OTF grant datasets provide a comprehensive view of funding through the foundation to social economy organizations serving equity seeking groups such as individuals with disabilities in Ontario.
 
 ## Research Questions answerable through the OTF Datasets
+
+
 
 ### Primary Research Question
 
