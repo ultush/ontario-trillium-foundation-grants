@@ -6,7 +6,7 @@ One of these best practices is transparency, and one of the OTFs transparency in
 The data published by OTF is useful for a number of reasons.
 First, the information available on OTF grants is considered to be administrative data, i.e.  it is data used for administration of grants.
 Second, the data published by OTF used in this analysis is Open Data, i.e. it is available for review and analysis by anybody, in machine readable format.
-Third, OTF grant data is Population data, in this case it is not a population of people, but a population of grants. i.e. this is not a "sample" of grants, its **all** grants for the organization OTF, within particular time periods and specific grant streams. 
+Third, OTF grant data is Population data, in this case it is not a population of people, but a population of grants. i.e. this is not a "sample" of grants, its **all** grants for the organization OTF, within particular time periods and specific grant streams.
 This makes the analysis of data relatively simple and less reliant on parametric statistics.
 The OTF grant datasets provide a comprehensive view of funding through the foundation to social economy organizations serving equity seeking groups such as individuals with disabilities in Ontario.
 
@@ -245,7 +245,7 @@ e.g. Using OpenRefine Facet clustering in the field Population Served: records u
 In the Age Group field, after initial clustering, there were a number of grants covering two Age Groups.
 As the following table demonstrates, there are only six grants out of 3105 that served two age groups, but its useful to separate them out to allow cleaner analysis.
 
-_Table 2: Number Of Grants Serving Two Age Groups_
+_Table 1: Number Of Grants Serving Two Age Groups_
 
 | Age Group 1                         | Age Group 2   | Number of Grants |
 |-------------------------------------|---------------|------------------|
@@ -258,6 +258,9 @@ _Table 2: Number Of Grants Serving Two Age Groups_
 | Youth                               |               | 640              |
 | Youth                               | Seniors (65+) | 1                |
 | (blank)                             |               | 1                |
+
+The version of the otf_data_inventory_en file which has been cleaned up using OpenRefine is available here: [otf_granting_data_since_april_1_2015_original2-openrefine-output](https://github.com/ultush/ontario-trillium-foundation-grants/blob/master/otf_granting_data_since_april_1_2015_original2-openrefine-output.csv).
+The cleaned up file was used to create the following tables. 
 
 _Table 2: Number Of Grants By Population Served And Fiscal Year_
 
