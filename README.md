@@ -29,5 +29,5 @@ The **original** Ontario Trillium Foundation (OTF) Grant Open Data files used fo
 Of course, the OTF files are updated frequently, and will differ based on when you download them, so they will differ from the version I downloaded on September 6, 2020.
 The file used for applying methodology and analysis can be found here: [otf_granting_data_since_april_1_2015_original2](https://github.com/ultush/ontario-trillium-foundation-grants/blob/master/otf_granting_data_since_april_1_2015_original2.csv)
 
-The newest iteration of my methodology is available [here](https://github.com/ultush/ontario-trillium-foundation-grants/blob/master/methodology)
+The newest iteration of my methodology is available [here](https://github.com/ultush/ontario-trillium-foundation-grants/blob/master/methodology-otf-since_2015.md)
 Open to feedback!
